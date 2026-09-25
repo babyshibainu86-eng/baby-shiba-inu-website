@@ -1,0 +1,163 @@
+ /* =========================================
+   BABY SHIBA INU — WEBSITE V2
+   Main Styles
+========================================= */
+
+:root {
+    --bg-main: #050817;
+    --bg-secondary: #080d22;
+    --bg-card: rgba(15, 22, 50, 0.78);
+
+    --blue: #39b8ff;
+    --blue-light: #78d5ff;
+    --gold: #ffc857;
+    --purple: #9b6cff;
+
+    --text-main: #ffffff;
+    --text-soft: #aab5d6;
+    --border: rgba(255, 255, 255, 0.10);
+
+    --container: 1180px;
+    --radius: 24px;
+
+    --shadow-blue: 0 0 35px rgba(57, 184, 255, 0.18);
+    --shadow-gold: 0 0 35px rgba(255, 200, 87, 0.15);
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: var(--text-main);
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(57, 184, 255, 0.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(155, 108, 255, 0.10),
+            transparent 30%
+        ),
+        var(--bg-main);
+
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+::selection {
+    background: rgba(57, 184, 255, 0.35);
+    color: #fff;
+}
+
+
+/* =========================================
+   GLOBAL CONTAINER
+========================================= */
+
+.nav-container,
+.section,
+.footer-container {
+    width: min(
+        calc(100% - 40px),
+        var(--container)
+    );
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1000;
+
+    background: rgba(5, 8, 23, 0.72);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.nav-container {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 17px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.brand-shiba {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 200, 87, 0.28),
+            rgba(57, 184, 255, 0.18)
+        );
+
+    border: 1px solid rgba(255, 255, 255
