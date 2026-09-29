@@ -3517,3 +3517,358 @@ img {
         top: 50%;
     }
    }
+/* =========================================================
+   BABY SHIBA WARRIOR - FINAL HERO FIX
+   Remove old CSS character and use real Warrior image
+   ========================================================= */
+
+/* ---------- REMOVE OLD ARTIFICIAL SHIBA ---------- */
+
+.hero-character,
+.hero-dog,
+.hero-placeholder,
+.hero-avatar,
+.hero-shiba,
+.shiba-character,
+.css-shiba,
+.character-body,
+.character-head,
+.character-face,
+.character-ear,
+.character-eye,
+.character-nose,
+.character-mouth,
+.character-tail {
+    display: none !important;
+}
+
+
+/* ---------- REMOVE OLD PORTAL/CHARACTER ELEMENTS ---------- */
+
+.hero-visual .portal-ring,
+.hero-visual .portal-rings,
+.hero-visual .portal,
+.hero-visual .hero-portal,
+.hero-visual .hero-character-bg {
+    display: none !important;
+}
+
+
+/* ---------- HERO VISUAL ---------- */
+
+.hero-visual {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 100% !important;
+    min-height: 650px !important;
+
+    overflow: hidden !important;
+}
+
+
+/* ---------- REAL BABY SHIBA WARRIOR ---------- */
+
+.hero-warrior {
+    position: absolute !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    width: min(760px, 92vw) !important;
+
+    z-index: 20 !important;
+
+    margin: 0 !important;
+
+    pointer-events: none !important;
+}
+
+
+.hero-warrior img {
+    display: block !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    max-width: none !important;
+
+    object-fit: contain !important;
+
+    border: 0 !important;
+    outline: 0 !important;
+
+    filter:
+        drop-shadow(0 0 25px rgba(255, 106, 0, 0.35))
+        drop-shadow(0 0 50px rgba(22, 119, 255, 0.20));
+
+    animation: babyShibaHeroFloat 6s ease-in-out infinite !important;
+}
+
+
+/* ---------- BACKGROUND GLOW ---------- */
+
+.hero-portal-glow {
+    position: absolute !important;
+
+    left: 50% !important;
+    top: 50% !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    width: 520px !important;
+    height: 520px !important;
+
+    border-radius: 50% !important;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22, 119, 255, 0.28) 0%,
+            rgba(255, 106, 0, 0.20) 35%,
+            rgba(255, 106, 0, 0.08) 55%,
+            transparent 72%
+        ) !important;
+
+    filter: blur(12px) !important;
+
+    z-index: 1 !important;
+
+    pointer-events: none !important;
+}
+
+
+/* ---------- COINS ---------- */
+
+.hero-coin {
+    position: absolute !important;
+
+    z-index: 25 !important;
+
+    width: 70px !important;
+    height: 70px !important;
+
+    border-radius: 50% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    font-size: 10px !important;
+    font-weight: 900 !important;
+
+    letter-spacing: 1px !important;
+
+    color: #ffffff !important;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #ffd78a,
+            #ff8a22 48%,
+            #9c3b00 100%
+        ) !important;
+
+    border: 2px solid rgba(255, 196, 105, 0.85) !important;
+
+    box-shadow:
+        0 0 18px rgba(255, 106, 0, 0.55),
+        inset 0 0 12px rgba(255, 255, 255, 0.20) !important;
+
+    animation: babyShibaCoinFloat 4s ease-in-out infinite !important;
+}
+
+
+.coin-left {
+    left: 5% !important;
+    top: 38% !important;
+}
+
+
+.coin-right {
+    right: 5% !important;
+    top: 48% !important;
+
+    animation-delay: 1.2s !important;
+}
+
+
+/* ---------- LIGHT PARTICLES ---------- */
+
+.hero-light {
+    position: absolute !important;
+
+    border-radius: 50% !important;
+
+    z-index: 10 !important;
+
+    pointer-events: none !important;
+}
+
+
+.light-one {
+    width: 7px !important;
+    height: 7px !important;
+
+    left: 18% !important;
+    top: 25% !important;
+
+    background: #ff8a22 !important;
+
+    box-shadow:
+        0 0 12px #ff8a22,
+        0 0 25px #ff8a22 !important;
+
+    animation: babyShibaParticle 4s ease-in-out infinite !important;
+}
+
+
+.light-two {
+    width: 6px !important;
+    height: 6px !important;
+
+    right: 20% !important;
+    top: 28% !important;
+
+    background: #42a5ff !important;
+
+    box-shadow:
+        0 0 12px #42a5ff,
+        0 0 25px #42a5ff !important;
+
+    animation: babyShibaParticle 5s ease-in-out infinite reverse !important;
+}
+
+
+/* ---------- ANIMATIONS ---------- */
+
+@keyframes babyShibaHeroFloat {
+
+    0%,
+    100% {
+        margin-top: 0;
+    }
+
+    50% {
+        margin-top: -10px;
+    }
+
+}
+
+
+@keyframes babyShibaCoinFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-16px) rotate(7deg);
+    }
+
+}
+
+
+@keyframes babyShibaParticle {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.35;
+    }
+
+    50% {
+        transform: translateY(-35px);
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-visual {
+        min-height: 540px !important;
+        height: 540px !important;
+
+        margin-top: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .hero-warrior {
+        left: 50% !important;
+        top: 50% !important;
+
+        width: 125vw !important;
+
+        transform: translate(-50%, -50%) !important;
+    }
+
+
+    .hero-warrior img {
+        width: 100% !important;
+    }
+
+
+    .hero-portal-glow {
+        width: 360px !important;
+        height: 360px !important;
+    }
+
+
+    .hero-coin {
+        width: 56px !important;
+        height: 56px !important;
+
+        font-size: 8px !important;
+    }
+
+
+    .coin-left {
+        left: 2% !important;
+        top: 38% !important;
+    }
+
+
+    .coin-right {
+        right: 2% !important;
+        top: 50% !important;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .hero-visual {
+        min-height: 500px !important;
+        height: 500px !important;
+    }
+
+
+    .hero-warrior {
+        width: 135vw !important;
+    }
+
+
+    .hero-coin {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+   }
