@@ -3311,3 +3311,209 @@ img {
     }
 
                      }
+/* =========================================
+   BABY SHIBA WARRIOR - REAL HERO IMAGE
+   ========================================= */
+
+.hero-visual {
+    position: relative;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-warrior {
+    position: relative;
+    z-index: 5;
+    width: min(760px, 90vw);
+    margin-top: 20px;
+    animation: warriorFloat 6s ease-in-out infinite;
+}
+
+.hero-warrior img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter:
+        drop-shadow(0 0 25px rgba(255, 106, 0, 0.35))
+        drop-shadow(0 0 55px rgba(22, 119, 255, 0.18));
+}
+
+.hero-portal-glow {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background:
+        radial-gradient(
+            circle,
+            rgba(22, 119, 255, 0.28) 0%,
+            rgba(255, 106, 0, 0.16) 38%,
+            transparent 70%
+        );
+    filter: blur(10px);
+    z-index: 1;
+    animation: portalPulse 5s ease-in-out infinite;
+}
+
+.hero-coin {
+    position: absolute;
+    z-index: 7;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    color: #fff;
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #ffd28a,
+            #ff8a22 45%,
+            #9d3b00 100%
+        );
+
+    border: 2px solid rgba(255, 190, 90, 0.8);
+
+    box-shadow:
+        0 0 20px rgba(255, 106, 0, 0.55),
+        inset 0 0 15px rgba(255, 255, 255, 0.2);
+
+    animation: coinFloat 4s ease-in-out infinite;
+}
+
+.coin-left {
+    left: 5%;
+    top: 34%;
+}
+
+.coin-right {
+    right: 4%;
+    top: 48%;
+    animation-delay: 1.2s;
+}
+
+.hero-light {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+    filter: blur(2px);
+}
+
+.light-one {
+    width: 8px;
+    height: 8px;
+    background: #ff8a22;
+    box-shadow:
+        0 0 12px #ff8a22,
+        0 0 25px #ff8a22;
+    left: 18%;
+    top: 22%;
+    animation: particleFloat 4s infinite;
+}
+
+.light-two {
+    width: 6px;
+    height: 6px;
+    background: #42a5ff;
+    box-shadow:
+        0 0 12px #42a5ff,
+        0 0 25px #42a5ff;
+    right: 20%;
+    top: 25%;
+    animation: particleFloat 5s infinite reverse;
+}
+
+@keyframes warriorFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes portalPulse {
+    0%,
+    100% {
+        transform: scale(0.96);
+        opacity: 0.75;
+    }
+
+    50% {
+        transform: scale(1.04);
+        opacity: 1;
+    }
+}
+
+@keyframes coinFloat {
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(8deg);
+    }
+}
+
+@keyframes particleFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translateY(-35px);
+        opacity: 1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .hero-visual {
+        min-height: 480px;
+        margin-top: 20px;
+    }
+
+    .hero-warrior {
+        width: 108vw;
+        max-width: 650px;
+        margin-left: -4vw;
+    }
+
+    .hero-portal-glow {
+        width: 360px;
+        height: 360px;
+    }
+
+    .hero-coin {
+        width: 55px;
+        height: 55px;
+        font-size: 8px;
+    }
+
+    .coin-left {
+        left: 2%;
+        top: 35%;
+    }
+
+    .coin-right {
+        right: 2%;
+        top: 50%;
+    }
+   }
