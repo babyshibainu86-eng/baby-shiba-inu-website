@@ -557,3 +557,58 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 });
+/* =========================================================
+   BABY SHIBA - MOBILE WORLD MAP REAL CARD POSITIONING
+   ========================================================= */
+
+function fixBabyShibaWorldMobile() {
+    const nodes = document.querySelectorAll(".world-node");
+
+    if (!nodes.length) return;
+
+    nodes.forEach((node) => {
+        const text = node.textContent
+            .replace(/\s+/g, " ")
+            .trim()
+            .toLowerCase();
+
+        node.classList.remove(
+            "world-entrance",
+            "world-community",
+            "world-arena",
+            "world-city",
+            "world-future",
+            "world-marketplace",
+            "world-blockchain",
+            "world-bshib"
+        );
+
+        if (text.includes("entrance portal")) {
+            node.classList.add("world-entrance");
+        } 
+        else if (text.includes("community hub")) {
+            node.classList.add("world-community");
+        } 
+        else if (text.includes("arena district")) {
+            node.classList.add("world-arena");
+        } 
+        else if (text.includes("city district")) {
+            node.classList.add("world-city");
+        } 
+        else if (text.includes("future city")) {
+            node.classList.add("world-future");
+        } 
+        else if (text.includes("marketplace plaza")) {
+            node.classList.add("world-marketplace");
+        } 
+        else if (text.includes("blockchain core")) {
+            node.classList.add("world-blockchain");
+        } 
+        else if (text.includes("bshib center")) {
+            node.classList.add("world-bshib");
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", fixBabyShibaWorldMobile);
+window.addEventListener("load", fixBabyShibaWorldMobile);
