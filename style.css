@@ -3872,3 +3872,183 @@ img {
     }
 
    }
+/* =========================================================
+   BABY SHIBA - MOBILE WORLD MAP FIX
+   Fix overlapping ecosystem/world cards on mobile
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* World section */
+    #world {
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .world-map {
+        position: relative !important;
+        width: 100% !important;
+        height: 760px !important;
+        min-height: 760px !important;
+        overflow: hidden !important;
+    }
+
+    /* World center */
+    .world-core,
+    .world-center,
+    .world-token,
+    .world-map-core {
+        position: absolute !important;
+        left: 50% !important;
+        top: 24% !important;
+        transform: translate(-50%, -50%) !important;
+        z-index: 5 !important;
+    }
+
+    /* Every world node/card */
+    .world-node {
+        position: absolute !important;
+        width: 190px !important;
+        max-width: 190px !important;
+        min-height: 115px !important;
+        box-sizing: border-box !important;
+        z-index: 10 !important;
+        overflow: hidden !important;
+    }
+
+    .world-node h3,
+    .world-node h4,
+    .world-node strong {
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+    }
+
+    .world-node p,
+    .world-node span {
+        white-space: normal !important;
+    }
+
+    /* TOP ROW */
+
+    .world-node:nth-child(1) {
+        left: 10px !important;
+        top: 25px !important;
+    }
+
+    .world-node:nth-child(2) {
+        right: 10px !important;
+        top: 25px !important;
+    }
+
+    /* CENTER / CORE */
+
+    .world-node:nth-child(3) {
+        left: 50% !important;
+        top: 205px !important;
+        transform: translateX(-50%) !important;
+    }
+
+    /* MIDDLE ROW */
+
+    .world-node:nth-child(4) {
+        left: 10px !important;
+        top: 375px !important;
+    }
+
+    .world-node:nth-child(5) {
+        right: 10px !important;
+        top: 375px !important;
+    }
+
+    /* BOTTOM ROW */
+
+    .world-node:nth-child(6) {
+        left: 50% !important;
+        top: 545px !important;
+        transform: translateX(-50%) !important;
+    }
+
+    /* Decorative rings */
+    .world-ring,
+    .world-orbit,
+    .world-map-ring {
+        max-width: 90vw !important;
+        max-height: 90vw !important;
+    }
+
+    /* Prevent horizontal page scrolling */
+    .world-section,
+    .world-container,
+    .world-map,
+    #world {
+        max-width: 100% !important;
+    }
+}
+
+
+/* Smaller phones */
+@media (max-width: 420px) {
+
+    .world-map {
+        height: 720px !important;
+        min-height: 720px !important;
+    }
+
+    .world-node {
+        width: 165px !important;
+        max-width: 165px !important;
+        min-height: 105px !important;
+        padding: 18px !important;
+    }
+
+    .world-node h3,
+    .world-node h4,
+    .world-node strong {
+        font-size: 14px !important;
+        line-height: 1.25 !important;
+    }
+
+    .world-node p,
+    .world-node span {
+        font-size: 9px !important;
+        line-height: 1.4 !important;
+    }
+
+    .world-node:nth-child(1),
+    .world-node:nth-child(4) {
+        left: 8px !important;
+    }
+
+    .world-node:nth-child(2),
+    .world-node:nth-child(5) {
+        right: 8px !important;
+    }
+
+    .world-node:nth-child(3),
+    .world-node:nth-child(6) {
+        left: 50% !important;
+    }
+}
+
+
+/* Very small phones */
+@media (max-width: 360px) {
+
+    .world-map {
+        height: 680px !important;
+        min-height: 680px !important;
+    }
+
+    .world-node {
+        width: 150px !important;
+        max-width: 150px !important;
+        padding: 15px !important;
+    }
+
+    .world-node h3,
+    .world-node h4,
+    .world-node strong {
+        font-size: 13px !important;
+    }
+           }
