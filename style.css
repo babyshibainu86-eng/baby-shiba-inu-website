@@ -4052,3 +4052,216 @@ img {
         font-size: 13px !important;
     }
            }
+/* =========================================================
+   BABY SHIBA - FINAL MOBILE WORLD MAP
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    #world {
+        overflow: hidden !important;
+    }
+
+    #world .world-map {
+        position: relative !important;
+        width: 100% !important;
+        height: 900px !important;
+        min-height: 900px !important;
+        overflow: hidden !important;
+    }
+
+    #world .world-node {
+        position: absolute !important;
+        box-sizing: border-box !important;
+        width: 190px !important;
+        min-height: 120px !important;
+        margin: 0 !important;
+        transform: none !important;
+        z-index: 20 !important;
+    }
+
+
+    /* =========================
+       1. ENTRANCE
+       ========================= */
+
+    #world .world-entrance {
+        left: 50% !important;
+        top: 285px !important;
+        transform: translateX(-50%) !important;
+    }
+
+
+    /* =========================
+       2. COMMUNITY
+       ========================= */
+
+    #world .world-community {
+        left: 20px !important;
+        top: 475px !important;
+    }
+
+
+    /* =========================
+       3. ARENA
+       ========================= */
+
+    #world .world-arena {
+        right: 20px !important;
+        top: 475px !important;
+    }
+
+
+    /* =========================
+       4. CITY
+       ========================= */
+
+    #world .world-city {
+        left: 20px !important;
+        top: 625px !important;
+    }
+
+
+    /* =========================
+       5. FUTURE CITY
+       ========================= */
+
+    #world .world-future {
+        right: 20px !important;
+        top: 625px !important;
+    }
+
+
+    /* =========================
+       6. MARKETPLACE
+       ========================= */
+
+    #world .world-marketplace {
+        left: 20px !important;
+        top: 775px !important;
+    }
+
+
+    /* =========================
+       7. BLOCKCHAIN
+       ========================= */
+
+    #world .world-blockchain {
+        right: 20px !important;
+        top: 775px !important;
+    }
+
+
+    /* =========================
+       8. BSHIB CENTER
+       ========================= */
+
+    #world .world-bshib {
+        display: none !important;
+    }
+
+
+    /* Center BSHIB graphic / core */
+    #world .world-core,
+    #world .world-center,
+    #world .world-token,
+    #world .world-map-core {
+        z-index: 5 !important;
+    }
+
+
+    /* Keep cards readable */
+    #world .world-node h3,
+    #world .world-node h4,
+    #world .world-node strong {
+        white-space: normal !important;
+        overflow: visible !important;
+        line-height: 1.25 !important;
+    }
+
+    #world .world-node p,
+    #world .world-node span {
+        white-space: normal !important;
+        overflow: visible !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    #world .world-map {
+        height: 850px !important;
+        min-height: 850px !important;
+    }
+
+    #world .world-node {
+        width: 160px !important;
+        min-height: 110px !important;
+        padding: 18px !important;
+    }
+
+
+    #world .world-entrance {
+        top: 275px !important;
+    }
+
+    #world .world-community {
+        left: 10px !important;
+        top: 450px !important;
+    }
+
+    #world .world-arena {
+        right: 10px !important;
+        top: 450px !important;
+    }
+
+    #world .world-city {
+        left: 10px !important;
+        top: 585px !important;
+    }
+
+    #world .world-future {
+        right: 10px !important;
+        top: 585px !important;
+    }
+
+    #world .world-marketplace {
+        left: 10px !important;
+        top: 720px !important;
+    }
+
+    #world .world-blockchain {
+        right: 10px !important;
+        top: 720px !important;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    #world .world-node {
+        width: 145px !important;
+        min-height: 105px !important;
+        padding: 15px !important;
+    }
+
+    #world .world-community,
+    #world .world-city,
+    #world .world-marketplace {
+        left: 7px !important;
+    }
+
+    #world .world-arena,
+    #world .world-future,
+    #world .world-blockchain {
+        right: 7px !important;
+    }
+   }
